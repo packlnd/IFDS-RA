@@ -1,0 +1,5 @@
+package taintanalysis
+
+class TransitiveSinkCaller {
+
+}
