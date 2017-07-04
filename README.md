@@ -14,11 +14,11 @@ Concurrent implementation of the IFDS algorithm based on Reactive Async
 
 Argument | Options
 --- | ---
-*ifds-solver* | "ra" or "heros"
-*static-analysis-lib* | "soot" (OPAL currently not supported)
-*taint-analysis* | "fw", "bidi", "gen", or "seq"
-*num-threads* | number of threads to use for the IFDS solver. The number of threads used by SOOT is not affected by this number.
-*path-to-jre* | Path to JRE folder
+__ifds-solver__ | "ra" or "heros"
+__static-analysis-lib__ | "soot" (OPAL currently not supported)
+__taint-analysis__ | "fw", "bidi", "gen", or "seq"
+__num-threads__ | number of threads to use for the IFDS solver. The number of threads used by SOOT is not affected by this number.
+__path-to-jre__ | Path to JRE folder
 
 Taint analysis explanation:
 - seq is the forwards IFDS algorithm on the Class.forName experimental setup in FlowTwist
@@ -27,7 +27,7 @@ Taint analysis explanation:
 - gen is the bidirectional IFDS algoirthm on the GenericCallerSensitive experimental setup in FlowTwist
 
 Currently the supported taint analyses are:
-- ra soot seq (does not actually use RA, should probably be rewritten to "seq soot fw" which better reflects which analysis is run)
+- ra soot seq _(does not actually use RA, should probably be rewritten to "seq soot fw" which better reflects which analysis is run)_
 - ra soot fw
 - ra soot bidi
 - ra soot gen
