@@ -1,5 +1,5 @@
 # IFDS-RA
-Concurrent implementation of the IFDS algorithm based on Reactive Async
+Concurrent implementation of the IFDS [1] algorithm based on Reactive Async [2]
 
 ## Dependencies
 - [Reactive Async](https://github.com/phaller/reactive-async)
@@ -56,3 +56,8 @@ where
 - SimpleTestRANoOPAL is the RA IFDS solver
 - SimpleTestBiDiNoOPAL is the sequential bidirectional IFDS solver
 - SimpleTestBiDiRANoOPAL is the bidirectional RA IFDS solver
+
+###### References
+[1] http://dl.acm.org/citation.cfm?id=199462
+[2] http://dl.acm.org/citation.cfm?id=2998396
+
