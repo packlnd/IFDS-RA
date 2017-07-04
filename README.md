@@ -57,7 +57,7 @@ where
 - SimpleTestBiDiNoOPAL is the sequential bidirectional IFDS solver
 - SimpleTestBiDiRANoOPAL is the bidirectional RA IFDS solver
 
-###### References
+### References
 [1] http://dl.acm.org/citation.cfm?id=199462
 
 [2] http://dl.acm.org/citation.cfm?id=2998396
