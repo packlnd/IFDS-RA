@@ -44,7 +44,6 @@ public abstract class AbstractAnalysis {
 	protected abstract ArrayList<String> createArgs();
 
 	protected abstract void executeAnalysis();
-	protected abstract void executeAnalysis(int threads);
 
 	private static void insertNopStatements() {
 		for (Iterator<MethodOrMethodContext> iter = Scene.v().getReachableMethods().listener(); iter.hasNext();) {
@@ -66,7 +65,7 @@ public abstract class AbstractAnalysis {
 			protected void internalTransform(String phaseName, @SuppressWarnings("rawtypes") Map options) {
 				Stats.print();
 				insertNopStatements();
-				executeAnalysis(threads);
+				executeAnalysis();
 			}
 		}));
 	}

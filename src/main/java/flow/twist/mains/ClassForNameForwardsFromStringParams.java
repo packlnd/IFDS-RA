@@ -13,14 +13,15 @@ import flow.twist.transformer.path.PathBuilderResultTransformer;
 
 public class ClassForNameForwardsFromStringParams {
 
-	public static void main(final String[] args) {
-		new AbstractMainAnalysis(args) {
+	public static void main(final String[] a) {
+    int threads = Integer.parseInt(a[0]);
+		new AbstractMainAnalysis(java.util.Arrays.copyOfRange(a, 1, a.length)) {
 			@Override
 			protected Set<Path> _executeAnalysis() {
         return null;
       }
 			@Override
-			protected void executeAnalysis(int threads) {
+			protected void executeAnalysis() {
 				SolverFactory.runOneDirectionSolver(AnalysisConfigurationBuilder.forwardsFromStringParametersDefaults(false).reporter(
 						new ConsoleReporter()), threads);
 			}

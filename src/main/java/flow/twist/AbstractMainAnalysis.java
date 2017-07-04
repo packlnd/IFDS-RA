@@ -51,19 +51,10 @@ public abstract class AbstractMainAnalysis extends AbstractAnalysis {
 		argList.add("-soot-class-path");
     String lib = jrePath + "/lib/";
     String sootPath =
-    //  ".:" +
-//      lib + "rt.jar" + ":" +
       lib + "jsse.jar" + ":" +
-    //  lib + "charsets.jar" + ":" +
-    //  lib + "deploy.jar" + ":" +
-    //  lib + "javaws.jar" + ":" +
-    //  lib + "jfr.jar" + ":" +
-    //  lib + "jfxswt.jar" + ":" +
-    //  lib + "management-agent.jar" + ":" +
-    //  lib + "plugin.jar" + ":" +
-    //  lib + "resources.jar" + ":" +
       lib + "jce.jar" +
       "";
+
 		argList.add(sootPath);
 		argList.add("-process-dir");
     argList.add(lib + "rt.jar");
@@ -72,13 +63,8 @@ public abstract class AbstractMainAnalysis extends AbstractAnalysis {
 		return argList;
 	}
 
-  @Override
-  protected void executeAnalysis() {
-
-  }
-
 	@Override
-	protected void executeAnalysis(int threads) {
+	protected void executeAnalysis() {
 		Set<Path> validPaths = _executeAnalysis();
 		System.out.println("Writing reports...");
 		writeReportFile(validPaths);

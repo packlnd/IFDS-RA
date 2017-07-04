@@ -12,8 +12,6 @@ import flow.twist.transformer.path.MergeEqualSelectorStrategy;
 import flow.twist.transformer.path.PathBuilderResultTransformer;
 
 public class RASEQ {
-	// public static void main(final String[] args) {
-	// 	new AbstractMainAnalysis(args) {
 	public static void main(final String[] a) {
     int threads = Integer.parseInt(a[0]);
 		new AbstractMainAnalysis(java.util.Arrays.copyOfRange(a, 1, a.length)) {
@@ -22,8 +20,7 @@ public class RASEQ {
         return null;
       }
 			@Override
-			protected void executeAnalysis(int q) {
-			//protected void executeAnalysis(int threads) {
+			protected void executeAnalysis() {
 				SolverFactory.runRASEQSolver(AnalysisConfigurationBuilder.forwardsFromStringParametersDefaults(false).reporter(
 						new ConsoleReporter()), threads);
 			}
