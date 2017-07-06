@@ -24,6 +24,6 @@ public class BiDiRA {
 				SolverFactory.runBiDiRASolver(AnalysisConfigurationBuilder.i2oSimpleClassForNameDefaults().reporter(
 						new ConsoleReporter()), threads);
 			}
-		}.execute();
+		}.execute("ra", "soot", "bidi", threads);
 	}
 }

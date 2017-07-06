@@ -24,6 +24,6 @@ public class RA {
 				SolverFactory.runRASolver(AnalysisConfigurationBuilder.forwardsFromStringParametersDefaults(false).reporter(
 						new ConsoleReporter()), threads);
 			}
-		}.execute();
+		}.execute("ra", "soot", "fw", threads);
 	}
 }

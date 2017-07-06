@@ -25,6 +25,6 @@ public class ClassForNameForwardsFromStringParams {
 				SolverFactory.runOneDirectionSolver(AnalysisConfigurationBuilder.forwardsFromStringParametersDefaults(false).reporter(
 						new ConsoleReporter()), threads);
 			}
-		}.execute();
+		}.execute("heros", "soot", "fw", threads);
 	}
 }

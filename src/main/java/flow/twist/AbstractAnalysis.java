@@ -25,18 +25,19 @@ import util.Util;
 public abstract class AbstractAnalysis {
 
   public void execute() {
-    execute(Runtime.getRuntime().availableProcessors());
+    execute("#", "#", "#", -1);
   }
 
-	public void execute(int numThreads) {
-    ArrayList<String> argList = createArgs();
-    AnalysisReporting.setSootArgs(argList);
-    registerAnalysisTransformer(numThreads);
+	public void execute(String ifds, String sa_lib, String ta, int numThreads) {
     for (int j=0; j<10; ++j) {
+      ArrayList<String> argList = createArgs();
+      AnalysisReporting.setSootArgs(argList);
+      registerAnalysisTransformer(numThreads);
       soot.Main.main(argList.toArray(new String[0]));
       try {
-        Files.copy(new File("./results/stats.txt").toPath(), new File("./" + numThreads + "_" + j).toPath(), REPLACE_EXISTING);
+        Files.copy(new File("./results/stats.txt").toPath(), new File("./" + ifds + "_" + sa_lib + "_" + ta + "_" + numThreads + "_" + j).toPath(), REPLACE_EXISTING);
       } catch (Exception e) {}
+      G.reset();
       Util.runGC();
     }
 	}

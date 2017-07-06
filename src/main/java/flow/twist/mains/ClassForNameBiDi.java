@@ -26,6 +26,6 @@ public class ClassForNameBiDi {
 			protected Set<Path> _executeAnalysis() {
         return null;
 			}
-		}.execute();
+		}.execute("heros", "soot", "bidi", threads);
 	}
 }

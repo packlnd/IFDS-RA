@@ -23,6 +23,6 @@ public class GenBiDiRA {
 			protected void executeAnalysis() {
 				SolverFactory.runBiDiRASolver(AnalysisConfigurationBuilder.i2oGenericCallerSensitiveDefaults().reporter(new ConsoleReporter()), threads);
 			}
-		}.execute();
+		}.execute("ra", "soot", "gen", threads);
 	}
 }

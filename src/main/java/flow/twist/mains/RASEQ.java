@@ -24,6 +24,6 @@ public class RASEQ {
 				SolverFactory.runRASEQSolver(AnalysisConfigurationBuilder.forwardsFromStringParametersDefaults(false).reporter(
 						new ConsoleReporter()), threads);
 			}
-		}.execute();
+		}.execute("ra", "soot", "seq", threads);
 	}
 }

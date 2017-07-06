@@ -26,6 +26,6 @@ public class GenericCallerSensitiveBiDi {
 			protected Set<Path> _executeAnalysis() {
         return null;
 			}
-		}.execute();
+		}.execute("heros", "soot", "gen", threads);
 	}
 }
